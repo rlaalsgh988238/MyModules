@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.testlibrary.databinding.RecyclerActivityMainBinding
 
-class TestActivity : AppCompatActivity() {
+class RecyclerMainActivity : AppCompatActivity() {
     private lateinit var binding: RecyclerActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

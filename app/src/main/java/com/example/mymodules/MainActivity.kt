@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mymodules.databinding.ActivityMainBinding
-import com.example.testlibrary.TestActivity
+import com.example.testlibrary.RecyclerMainActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.fragmentButton.setOnClickListener{
-            val intent = Intent(this, TestActivity::class.java)
+            val intent = Intent(this, RecyclerMainActivity::class.java)
             startActivity(intent)
         }
 
