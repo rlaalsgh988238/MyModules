@@ -1,25 +1,21 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.example.mymodules'
+    namespace 'com.example.testlibrary'
     compileSdk 33
-
-    defaultConfig {
-        applicationId "com.example.mymodules"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    buildFeatures{
+        viewBinding = true
     }
 
-    //뷰바인딩 
-    buildFeatures {
-        viewBinding true
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -38,8 +34,6 @@ android {
 }
 
 dependencies {
-    implementation project(':RecyclerViewModule')
-    //:testLibrary 연동
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
